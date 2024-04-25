@@ -1,0 +1,62 @@
+#include "list.h"
+
+/* functions definitions */
+
+void createList(List *pl)
+{
+	pl->size = 0;
+}
+
+
+void destroyList(List *pl)
+{
+	pl->size = 0;
+}
+
+
+int listEmpty(List *pl)
+{
+	return !pl->size?0:1;
+}
+
+
+int listFull(List *pl)
+{
+	return pl->size == MAXLIST ? 1:0 ;
+}
+
+
+int listSize(List *pl)
+{
+	return pl->size;
+}
+
+
+void insertList(int p, ListEntry e, List *pl)
+{
+
+}
+
+
+void deleteList(int p, ListEntry *e, List *pl)
+{
+
+}
+
+
+void retrieveList(int p, ListEntry *e, List *pl)
+{
+
+}
+
+
+void replaceList(int p, ListEntry e, List *pl)
+{
+
+}
+
+
+void traverseList(List *pl, void (*pf)(ListEntry))
+{
+
+}

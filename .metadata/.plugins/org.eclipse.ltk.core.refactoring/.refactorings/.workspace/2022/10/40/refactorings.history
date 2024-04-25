@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Fabinocci&apos; to &apos;Fibonacci&apos;" description="Rename resource &apos;Fabinocci&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Fabinocci" name="Fibonacci" stamp="1665096132586" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;Polish Notation/polishNotation_app&apos;" deleteContents="false" description="Delete resource &apos;Polish Notation/polishNotation_app&apos;" element1="/Polish Notation/polishNotation_app" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1665106111405"/>
+</session>

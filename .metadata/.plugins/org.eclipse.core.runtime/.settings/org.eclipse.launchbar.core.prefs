@@ -1,0 +1,10 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Fabinocci.exe,org.eclipse.launchbar.core.descriptorType.default\:Factorial.exe,org.eclipse.launchbar.core.descriptorType.default\:Tower_of_Hanoi.exe,org.eclipse.launchbar.core.descriptorType.default\:Stack_linkedBased.exe,org.eclipse.launchbar.core.descriptorType.default\:Queue_arrayBased.exe,org.eclipse.launchbar.core.descriptorType.default\:Queue_linkedBased.exe,org.eclipse.launchbar.core.descriptorType.default\:Stack_arrayBased.exe,org.eclipse.launchbar.core.descriptorType.default\:Stack.exe,org.eclipse.launchbar.core.descriptorType.default\:Polish Notation.exe,org.eclipse.launchbar.core.descriptorType.default\:List_arrayBased.exe
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Fabinocci.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Fabinocci.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Queue_linkedBased.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Stack_arrayBased.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Stack_arrayBased.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

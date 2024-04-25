@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Stack_linkedBased/Stack_arrayBased_Module&apos; to &apos;Stack_linkedBased_Module&apos;" description="Rename resource &apos;Stack_arrayBased_Module&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Stack_arrayBased_Module" name="Stack_linkedBased_Module" stamp="1664505800629" updateReferences="true"/>
+</session>

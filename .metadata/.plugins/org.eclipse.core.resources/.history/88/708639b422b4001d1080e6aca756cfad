@@ -1,0 +1,50 @@
+#include "list.h"
+
+/* functions definitions */
+
+void createList(List *pl)
+{
+
+}
+
+
+int listEmpty(List *pl)
+{
+	return 0;
+}
+
+
+int listFull(List *pl)
+{
+	return 0;
+}
+
+
+int listSize(List *pl)
+{
+	return 0;
+}
+
+
+void insertList(int p, ListEntry e, List *pl)
+{
+
+}
+
+
+void deleteList(int p, ListEntry *e, List *pl)
+{
+
+}
+
+
+void retrieveList(int p, ListEntry *e, List *pl)
+{
+
+}
+
+
+void replaceList(int p, ListEntry e, List *pl)
+{
+
+}
