@@ -42,6 +42,10 @@ void InorderIterative(Tree *tree, void (*func)(TreeEntry));
 void Postorder(Tree*, void (*)(TreeEntry));
 void InsertNode(Tree*, TreeEntry*);
 void InsertNodeIterative(Tree *tree, TreeEntry *pe);
+int FindItemTree(Tree *, TreeEntry);
+int FindItemTreeIterative(Tree *, TreeEntry);
+int DeleteItemTree(Tree *, TreeEntry);//assuming that the TreeEntry is not a structure
+
 
 void CreateTree2(Tree2 *);
 int TreeEmpty2(Tree2 *);
@@ -54,6 +58,7 @@ void Inorder2(Tree2*, void (*)(TreeEntry));
 void Inorder2Iterative(Tree2 *tree, void (*func)(TreeEntry));
 void Postorder2(Tree2*, void (*)(TreeEntry));
 void InsertNode2(Tree2*, TreeEntry*);
+int FindItemTree2(Tree2 *tree, TreeEntry key);
 
 
 

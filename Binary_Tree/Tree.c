@@ -184,6 +184,54 @@ void InsertNodeIterative(Tree *tree, TreeEntry *pe)
 
 }
 
+int FindItemTree(Tree *tree, TreeEntry key)
+{
+	if(!*tree)
+		return -1;
+	if((*tree)->entry == key)
+	{
+		return 1;
+	}
+
+	else if((*tree)->entry > key)
+	{
+		return FindItemTree(&(*tree)->left, key);
+	}
+	else
+	{
+		return FindItemTree(&(*tree)->right, key);
+	}
+}
+
+int FindItemTreeIterative(Tree *tree, TreeEntry key)
+{
+	TreeNode *p = *tree;
+	while(p)
+	{
+		if(p->entry == key)
+		{
+			return 1;
+		}
+		else if(p->entry > key)
+		{
+			p = p->left;
+		}
+		else
+		{
+			p = p->right;
+		}
+
+	}
+
+	return -1;
+}
+
+
+int FindItemTree2(Tree2 *tree, TreeEntry key)
+{
+	return FindItemTree(&tree->root, key);
+}
+
 void InsertNodeAux(Tree *tree, TreeEntry *pe,int *pdepth)
 {
 	if(! *tree)//first node
@@ -239,5 +287,132 @@ int TreeDepth2(Tree2 *tree)
 {
 	return tree->depth;
 }
+
+
+
+
+void DeleteNodeTree(TreeNode **nodePtr)
+{
+	//Two solutions first one is to add the left tree of the deleted node to the last
+	//left node in the right tree and add the right tree in place of the deleted node
+	//but it's inefficient solution because the depth of the tree will increase a lot
+
+	//the second one is to add the most right node of the left tree of the deleted node
+	//in place of the deleted node .. or the most left node of the right tree of the deleted node
+
+	//to do change current name
+	TreeNode *current = *nodePtr, *prev= NULL;
+
+	if(!current->left)
+	{
+		(*nodePtr) = (*nodePtr)->right;
+	}
+	else if(!current->right)
+	{
+		(*nodePtr)= (*nodePtr)->left;
+	}
+	else
+	{
+		/* inefficient solution */
+//		(*nodePtr) = (*nodePtr)->right;
+//		for(prev = current->right; prev->left; prev=prev->left);
+//		prev->left = current->left;
+
+		/* efficient solution */
+		prev = current;
+		current = current->left;
+		if(!current->right)
+		{
+			*nodePtr = current;
+			current->right = prev->right;
+			current = prev;
+		}
+		else
+		{
+			while(current->right)
+			{
+				prev = current;
+				current = current->right;
+			}
+//			prev->right = NULL;
+//			prev = current;
+//			current = *nodePtr;
+//			*nodePtr = prev;
+//			prev->right = current->right;
+//			while(prev->left)
+//			{
+//				prev = prev->left;
+//			}
+//			prev->left = current->left;
+
+			/* A trick is to copy the entry and delete the node easier than moving the node to the position of the deleted one */
+			prev->right = current->left;
+			(*nodePtr)->entry = current->entry;
+
+
+		}
+	}
+
+	free(current);
+}
+
+
+
+int DeleteItemTree(Tree *tree, TreeEntry key)
+{
+	TreeNode *current = *tree,*prev=NULL ;
+	while(current)
+	{
+		prev = current;
+		if(current->entry == key)
+		{
+			break;
+		}
+		else if(current->entry > key)
+		{
+			current = current->left;
+		}
+		else
+		{
+			current = current->right;
+		}
+
+	}
+
+	if(!current)
+	{
+		return -1;
+	}
+
+	if(!prev)//delete root
+	{
+		DeleteNodeTree(tree);
+	}
+	else if(key > prev->entry)
+	{
+		DeleteNodeTree(&prev->right);
+	}
+	else
+	{
+		DeleteNodeTree(&prev->left);
+	}
+
+	return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

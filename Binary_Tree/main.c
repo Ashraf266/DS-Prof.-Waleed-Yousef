@@ -16,18 +16,29 @@ int main(void)
 	CreateTree(&t1);
 	CreateTree2(&t2);
 
-	TreeNode n4 = {4, NULL, NULL};
-	TreeNode n3 = {3, &n4, NULL};
-	TreeNode n2 = {2, NULL, NULL};
-	TreeNode n1 = {1, &n2, &n3};
-
-	t1 = &n1;
-	t2.root = &n1;
+	TreeEntry element = 6;
+	InsertNode(&t1, &element);
+	InsertNode2(&t2, &element);
+	element = 4;
+	InsertNode(&t1, &element);
+	InsertNode2(&t2, &element);
+	element = 5;
+	InsertNode(&t1, &element);
+	InsertNode2(&t2, &element);
+	element = 2;
+	InsertNode(&t1, &element);
+	InsertNode2(&t2, &element);
+	element = 3;
+	InsertNode(&t1, &element);
+	InsertNode2(&t2, &element);
 
 	InorderIterative(&t1, print);
 	Inorder2(&t2, print);
+	printf("Tree Size: %d\nTree Depth: %d\n",TreeSize(&t1), TreeDepth(&t1));
+	printf("Tree Size: %d\nTree Depth: %d\n",TreeSize2(&t2), TreeDepth2(&t2));
 
-
+	printf("Find 5==> %d\n",FindItemTreeIterative(&t1, 5));
+	printf("Find 0==> %d\n",FindItemTreeIterative(&t1, 0));
 
 
 	return 0;
